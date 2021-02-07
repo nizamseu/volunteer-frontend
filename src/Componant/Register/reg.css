@@ -1,0 +1,47 @@
+body{
+    background-color:#FFFFFF;
+    min-height: 100%;
+}
+.reg{
+background-color:white;
+width: 400px;
+margin: auto;
+padding: 20px;
+border: 1px solid grey;
+}
+Input {
+    width: 100%;
+    border-top: none ;border-left: none;border-right: none;  
+}
+.auth{
+    width: 100%;
+    border-radius:25px;
+    border: none;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid gray;
+  padding-top: 5px;
+   
+}
+.gLogo{
+    float: left;
+    width: 35px;
+    height: 35px;
+ 
+
+}
+.account{
+    padding-top: 30px;
+}
+.auth-main{
+    height: 450px;
+}
+.logTex{
+    padding-bottom: 30px;
+   font-size: 30px;
+   font-weight: bold;
+}
+.authLogo img{
+    width: 300px;
+    padding: 50px;
+}

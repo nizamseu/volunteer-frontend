@@ -1,0 +1,31 @@
+
+.menuText{
+    margin-top: 50px;
+   text-align: center;
+   margin-bottom: 40px;
+   color: black;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+   
+
+}
+.menu{
+    padding-top: 20px;
+}
+.search{
+    width: 350px;
+   border-style: none;
+   height: 55px;
+   background-color: #FBFBFB;
+   border-radius: 10px 0 0 10px;
+   padding: 10px;
+   color: #FBFBFB;
+}
+.searchBtn{
+    width: 120px;
+    color: white;
+    border-style: none;
+    height: 55px;
+    background-color:#3F90FC;
+    border-radius: 0 10px 10px 0;
+}

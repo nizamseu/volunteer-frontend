@@ -1,0 +1,11 @@
+.card{
+    width: 40%;
+    display: flex;
+}
+.papper{
+    display: inline-flex;
+    margin: 20px;
+    width: 40%;
+    height: 100px;
+    align-items: center;
+}

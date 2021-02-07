@@ -1,0 +1,20 @@
+.header{
+width: 200px;
+border-style: none;
+background-color: rgb(189, 124, 27);
+}
+
+
+.btn{
+
+    text-decoration: none;
+    font-weight:thin;
+    margin: 10px;
+}
+.headerMain{
+    height:500px;
+    background-image: url('https://images.pexels.com/photos/2837572/pexels-photo-2837572.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
