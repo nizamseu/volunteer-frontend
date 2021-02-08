@@ -44,7 +44,6 @@ const EventTask = () => {
     const [user,setUser]=useContext(userAuth)
     const [loadData,setLoadData]=useState([]);
 
-console.log("me",user);
     useEffect(()=>{
         fetch(`http://localhost:5000/users/eventTask/${user.email}`)
         .then(res=>res.json())

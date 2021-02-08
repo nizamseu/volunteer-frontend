@@ -9,7 +9,21 @@ import './eventCreate.css'
 const VolunteerList = () => {
 
     const [list,setList]=useState([])
-
+  const handleDelete=(e,id)=>{
+  console.log(e,id);
+  fetch(`http://localhost:5000/users/delete/${id}`,{
+    method:'DELETE',
+    body:{
+      'Content-Type': 'application/json',
+            'Accept': 'application/json'}
+  })
+  .then(res=>res.json())
+  .then(result=>{
+    if(result){
+      e.target.parentNode.parentNode.parentNode.style.display='none'
+    }
+  })
+  }
     useEffect(()=>{
         fetch('http://localhost:5000/users/list')
         .then(res=>res.json())
@@ -47,7 +61,9 @@ const VolunteerList = () => {
           <td>{item?.selectedDate?.substring(0,10)}</td>
           <td>{item?.data?.Title}</td>
           <td>
-          <button className='imgButton'><img  className='delImg'  src={trash} alt=""/></button>
+          <button 
+          onClick={(e)=>handleDelete(e,item._id)}
+          className='imgButton'><img  className='delImg'  src={trash} alt=""/></button>
           </td>
          
         </tr>
