@@ -11,7 +11,7 @@ const VolunteerList = () => {
     const [list,setList]=useState([])
   const handleDelete=(e,id)=>{
   console.log(e,id);
-  fetch(`http://localhost:5000/users/delete/${id}`,{
+  fetch(`https://desolate-depths-30255.herokuapp.com/users/delete/${id}`,{
     method:'DELETE',
     body:{
       'Content-Type': 'application/json',
@@ -25,7 +25,7 @@ const VolunteerList = () => {
   })
   }
     useEffect(()=>{
-        fetch('http://localhost:5000/users/list')
+        fetch('https://desolate-depths-30255.herokuapp.com/users/list')
         .then(res=>res.json())
         .then(data=>{
             setList(data)

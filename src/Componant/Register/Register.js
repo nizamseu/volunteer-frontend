@@ -30,7 +30,7 @@ console.log("load",loadData);
       const onSubmit = (data,e) =>{
         console.log("data",data);
       const newData={data,selectedDate}
-            axios.post(`http://localhost:5000/users/reg`,newData)
+            axios.post(`https://desolate-depths-30255.herokuapp.com/users/reg`,newData)
             .then(result=>{
                 console.log("Backed Data",result);
             })
@@ -39,7 +39,7 @@ console.log("load",loadData);
         } 
 
         useEffect(()=>{
-          fetch(`http://localhost:5000/users/loadData/${id}`)
+          fetch(`https://desolate-depths-30255.herokuapp.com/users/loadData/${id}`)
           .then(res=>res.json())
           .then(data=>{
            setLoadData(data)

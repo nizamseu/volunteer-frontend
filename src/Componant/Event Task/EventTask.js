@@ -45,7 +45,7 @@ const EventTask = () => {
     const [loadData,setLoadData]=useState([]);
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/users/eventTask/${user.email}`)
+        fetch(`https://desolate-depths-30255.herokuapp.com/users/eventTask/${user.email}`)
         .then(res=>res.json())
         .then(data=>{
             setLoadData(data)
@@ -54,7 +54,7 @@ const EventTask = () => {
 
 const handleCancel=(id,event)=>{
     console.log("id",id);
-    fetch(`http://localhost:5000/users/delete/${id}`,{
+    fetch(`https://desolate-depths-30255.herokuapp.com/users/delete/${id}`,{
         method:'DELETE',
         headers : { 
             'Content-Type': 'application/json',

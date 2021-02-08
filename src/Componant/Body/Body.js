@@ -7,7 +7,7 @@ const Body = () => {
     const [load,setLoad]=useState([]);
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/users/find`)
+        fetch(`https://desolate-depths-30255.herokuapp.com/users/find`)
         .then(res=>res.json())
         .then(data=>{
            
