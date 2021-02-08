@@ -1,4 +1,4 @@
-import { Button, Grid, Paper } from '@material-ui/core';
+import { Button, Grid} from '@material-ui/core';
 import React, { useState } from 'react';
 import EventCreate from './EventCreate';
 import VolunteerList from './VolunteerList';

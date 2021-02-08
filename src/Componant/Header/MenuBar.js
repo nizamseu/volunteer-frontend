@@ -1,4 +1,3 @@
-import { Button, Grid, TextField, Typography } from '@material-ui/core';
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import nature from '../../logos/nature.png'

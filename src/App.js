@@ -1,7 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import EventCreate from './Componant/Admin/EventCreate';
-import Body from './Componant/Body/Body';
 import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import Register from './Componant/Register/Register';
 import EventTask from './Componant/Event Task/EventTask';
@@ -12,6 +11,8 @@ import Admin from './Componant/Admin/Admin';
 import PrivateRoute from './Componant/Header/PrivateRoute';
 import VolunteerList from './Componant/Admin/VolunteerList';
 import MenuBar from './Componant/Header/MenuBar';
+import Spinner from './Spinner/Spinner';
+
 export const userAuth=createContext()
 
 function App() {
@@ -69,6 +70,10 @@ const [user,setUser]=useState({
 
       <Route path='/menuBar'>
         <MenuBar></MenuBar>
+      </Route>
+
+      <Route path='/sp'>
+          <Spinner></Spinner>
       </Route>
 
       <Route exact path="/">

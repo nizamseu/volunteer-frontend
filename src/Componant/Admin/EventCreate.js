@@ -1,20 +1,18 @@
-import React, {history , useState ,useEffect} from 'react';
+import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import 'date-fns';
 import Grid from '@material-ui/core/Grid';
 import DateFnsUtils from '@date-io/date-fns';
-import { Button,Typography } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 import {
   MuiPickersUtilsProvider,
   KeyboardDatePicker,
 } from '@material-ui/pickers';
 import './eventCreate.css'
-import { useHistory } from 'react-router-dom';
 const axios = require('axios');
 
 
 const EventCreate = () => {
-    const history=useHistory()
     const [selectedDate, setSelectedDate] = useState(new Date());
 
     const handleDateChange = (date) => {    

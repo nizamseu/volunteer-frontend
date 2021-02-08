@@ -3,7 +3,7 @@ import { userAuth } from '../../App';
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './config';
-import { Button, Grid, IconButton,  Typography } from '@material-ui/core';
+import {  Grid, Typography } from '@material-ui/core';
 import Google from '../../logos/google.png'
 import logo from '../../logos/Group 1329.png'
 import '../Register/reg.css'

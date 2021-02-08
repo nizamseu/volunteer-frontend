@@ -1,15 +1,14 @@
-import React, {history , useState ,useEffect} from 'react';
+import React, { useState ,useEffect} from 'react';
 import { useForm } from "react-hook-form";
 import 'date-fns';
 import Grid from '@material-ui/core/Grid';
 import DateFnsUtils from '@date-io/date-fns';
-import { Button,Input,Typography } from '@material-ui/core';
+import { Button} from '@material-ui/core';
 import {
   MuiPickersUtilsProvider,
   KeyboardDatePicker,
 } from '@material-ui/pickers';
 import './reg.css'
-import { flexbox } from '@material-ui/system';
 import { useHistory, useParams } from 'react-router-dom';
 import logo from '../../logos/Group 1329.png'
 const axios = require('axios');

@@ -1,8 +1,8 @@
-import { Button} from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
-import { Card, CardGroup} from 'react-bootstrap/';
+import { Card} from 'react-bootstrap/';
 import './body.css'
 import {Link} from "react-router-dom";
+import Spinner from '../../Spinner/Spinner';
 const Body = () => {
     const [load,setLoad]=useState([]);
 
@@ -19,7 +19,9 @@ const Body = () => {
              {/* <Link to={'/addEvent'}> Add Event </Link>
              <Link to={'/event'}> Event Task </Link> */}
            
-           
+           {
+               load.length ===0 && <Spinner></Spinner>
+           }
 
             {load &&
                  load.map(item=>

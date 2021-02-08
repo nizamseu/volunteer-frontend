@@ -1,8 +1,7 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Button } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import trash from '../../logos/trash-alt-regular.svg'
+import Spinner from '../../Spinner/Spinner';
 import './eventCreate.css'
 
 
@@ -34,9 +33,12 @@ const VolunteerList = () => {
     },[])
     return (
         <div className='tbl'>
-            <h4>Register Volunteer List</h4>
+        <h4>Register Volunteer List</h4>
 
-        <div className='tblInside'>
+<div className='tblInside'>
+        {
+          list.length===0 && <Spinner></Spinner>
+        }
 
         {
         list&&

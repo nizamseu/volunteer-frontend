@@ -13,13 +13,14 @@
     padding-top: 20px;
 }
 .search{
-    width: 350px;
+   width: 350px;
    border-style: none;
    height: 55px;
    background-color: #FBFBFB;
    border-radius: 10px 0 0 10px;
    padding: 10px;
-   color: #FBFBFB;
+   color: #000000;
+   
 }
 .searchBtn{
     width: 120px;
