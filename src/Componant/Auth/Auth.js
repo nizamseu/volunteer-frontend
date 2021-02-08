@@ -48,7 +48,7 @@ const handleSignIn =()=>{
     return (
         <div >
            <Grid className='  d-flex justify-content-center authLogo'>
-            <Link to={'/'}><img src={logo} alt=""/></Link> 
+            <Link to={'/home'}><img src={logo} alt=""/></Link> 
              </Grid>
             <Grid direction='column' xs={12} className=' auth-main d-flex justify-content-center reg'>
             

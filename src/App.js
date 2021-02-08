@@ -76,6 +76,11 @@ const [user,setUser]=useState({
           <Spinner></Spinner>
       </Route>
 
+
+      <Route exact path="/home">
+       <MenuBar></MenuBar>
+    </Route>
+
       <Route exact path="/">
        <MenuBar></MenuBar>
     </Route>

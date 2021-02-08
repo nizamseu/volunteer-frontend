@@ -114,7 +114,7 @@ console.log("load",loadData);
       {errors.date && <span>Title is required</span>}
       <br/>
 
-      <Button variant="contained" color="primary" fullWidth='true' type="submit">Sumit</Button>
+      <Button variant="contained" color="primary" fullWidth='true' type="submit">Submit</Button>
       
     </form>
     

@@ -5,6 +5,7 @@ import firebase from "firebase/app";
 import logo from '../../logos/Group 1329.png'
 import { userAuth } from '../../App';
 import { Image, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 
 const Header = () => {
@@ -40,12 +41,12 @@ const Header = () => {
            }
          
          
-            <Nav.Link className="btn"  href={'/'}>Home</Nav.Link>
-                <Nav.Link className="btn">Donation</Nav.Link>
-                <Nav.Link className="btn"  href={'/event'}>Event</Nav.Link>
-                <Nav.Link className="btn">BLog</Nav.Link>
-                <Nav.Link className="btn" href={'/reg'}  >Register</Nav.Link>
-                <Nav.Link className="btn"  href={'/admin'}  >Admin</Nav.Link>
+            <Link className="btn"  to={'/home'}>Home</Link>
+                <Link className="btn">Donation</Link>
+                <Link className="btn"  to={'/event'}>Event</Link>
+                <Link className="btn">BLog</Link>
+                <Link className="btn" to={'/reg'}  >Register</Link>
+                <Link className="btn"  to={'/admin'}  >Admin</Link>
                
                 {
                 user.email?<Nav.Link className="btn" onClick={()=>handleSignOut()}>Log Out</Nav.Link>

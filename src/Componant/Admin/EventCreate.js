@@ -84,7 +84,7 @@ const EventCreate = () => {
       <br/>  <br/>
 
 
-      <Button type="submit">Sumit</Button>
+      <Button type="submit">Submit</Button>
       {/* <Input type="submit" /> */}
     </form>
     </Grid>

@@ -15,7 +15,7 @@ const [toggled,setToggled]=useState(true)
         <div>
         <Grid container spacing={3}>
             <Grid item xs={3} className='authLogo'>
-               <Link to={'/'}><img src={logo} alt=""/></Link> 
+               <Link to={'/home'}><img src={logo} alt=""/></Link> 
             <Grid className='leftMenu'>
             <Button 
                 onClick={()=>setToggled(true)}
