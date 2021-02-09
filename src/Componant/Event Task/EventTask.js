@@ -5,28 +5,30 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import { userAuth } from '../../App';
-import { Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 
 
 const useStyles = makeStyles((theme) => ({
     root: {
-      flexGrow: 2,
-      marginLeft:'100px',
-      marginTop:'50px'
+    
+      marginTop:'50px',
+      marginLeft:'5%',
+      marginRight:'1%',
+      
     },
     paper: {
       padding: theme.spacing(2),
-      margin: 'auto',
-      maxWidth: 500,
+      margin: '15px',
+      paddin:'5px',
       display: 'inline-flex',
-      margin:' 20px 20px 20px 30px',
       width: '45%',
-      height: '20%',
+      height: '250px',
       alignContent:'center',
+      boxShadow:'5px 7px 7px 5px gray'
+
 
     },
     imagee: {
-      padding:10,
       width:'250px',
       height: '200px',
     },
@@ -75,40 +77,41 @@ const handleCancel=(id,event)=>{
 
     console.log("backdata",loadData);
     return (
-        <Row className={classes.root}>
+        <Row item xs={12} className={classes.root}>
 
         {
             loadData&&
-            loadData.map(item=> <Paper className={classes.paper}>
-                <Grid container spacing={2}>
+            loadData.map(item=> <Col item xs={12} sm={5} className={classes.paper}>
+              
                   
-                    <Grid className={classes.imagee}>
+                    <Grid item xs={5} className={classes.imagee}>
                       <img className={classes.img} alt="complex" src={item.data.pic} />
                     </Grid>
                  
-                  <Grid item xs={12} sm container>
-                    <Grid item xs container direction="column" spacing={2}>
-                      <Grid item xs>
-                        <Typography gutterBottom variant="h5">
+                  
+                    
+                      <Grid item xs={7} style={{padding:'20px',height:'100%'}}>
+                        <Typography gutterBottom  variant='h5'>
                           {item.data.Title}
-                        </Typography>
-                        <Typography variant="h6" gutterBottom>
+                        </Typography >
+                        <Typography  gutterBottom>
                           {item.selectedDate.substring(0,10)}
                         </Typography>
-                      </Grid>
-                      <Grid item>
-                        <Button 
+                      
+                       <Grid >
+                       <Button
                         variant="contained" 
-                        style={{ cursor: 'pointer',float:'right'}}
+                        style={{float:'right',marginTop:'30%'}}
                         onClick={(event)=>{handleCancel(item._id,event)}}
                         >
                           Cancel
                         </Button>
+                       </Grid>
                       </Grid>
-                    </Grid>
-                  </Grid>
-                </Grid>
-              </Paper>)
+                 
+                  
+                
+              </Col>)
         }
     </Row>
     );
