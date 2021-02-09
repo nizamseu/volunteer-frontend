@@ -1,6 +1,5 @@
-import { Grid } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
-import { Table } from 'react-bootstrap';
+import { Card,  Row, Table } from 'react-bootstrap';
 import trash from '../../logos/trash-alt-regular.svg'
 import Spinner from '../../Spinner/Spinner';
 import './eventCreate.css'
@@ -33,22 +32,20 @@ const VolunteerList = () => {
 
     },[])
     return (
-        <Grid item xs={12} className='tbl'>
+<Row item xs={12}>
         <h4>Register Volunteer List</h4>
-
-<Grid className='tblInside'>
         {
           list.length===0 && <Spinner></Spinner>
         }
 
         {
         list&&
- <Table class="table" >
-  <thead class="thead-dark " > 
+ <Table   class='table'>
+  <thead   class="thead-dark "> 
     <tr>
       <th>#</th>
       <th>Name</th>
-      <th>Email</th>
+      <th>E-mail</th>
       <th>Registration Date</th>
       <th>Volunter LIst</th>
       <th>Action</th>
@@ -77,9 +74,8 @@ const VolunteerList = () => {
   </tbody>
 </Table>
         }
-        </Grid>
+        </Row>
 
-        </Grid>
     );
 };
 

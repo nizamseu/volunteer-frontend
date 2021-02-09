@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import { userAuth } from '../../App';
+import { Row } from 'react-bootstrap';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -20,18 +21,19 @@ const useStyles = makeStyles((theme) => ({
       display: 'inline-flex',
       margin:' 20px 20px 20px 30px',
       width: '45%',
-      height: '200px',
+      height: '20%',
       alignContent:'center',
 
     },
     imagee: {
-      padding:10
+      padding:10,
+      width:'250px',
+      height: '200px',
     },
     img: {
       margin: 'auto',
-      display: 'block',
-      width:'200px',
-      height: '150px',
+      width:'100%',
+      height: '100%',
      
     },
   }));
@@ -73,17 +75,17 @@ const handleCancel=(id,event)=>{
 
     console.log("backdata",loadData);
     return (
-        <div className={classes.root}>
+        <Row className={classes.root}>
 
         {
             loadData&&
             loadData.map(item=> <Paper className={classes.paper}>
                 <Grid container spacing={2}>
-                  <Grid item>
-                    <ButtonBase className={classes.imagee}>
+                  
+                    <Grid className={classes.imagee}>
                       <img className={classes.img} alt="complex" src={item.data.pic} />
-                    </ButtonBase>
-                  </Grid>
+                    </Grid>
+                 
                   <Grid item xs={12} sm container>
                     <Grid item xs container direction="column" spacing={2}>
                       <Grid item xs>
@@ -108,7 +110,7 @@ const handleCancel=(id,event)=>{
                 </Grid>
               </Paper>)
         }
-    </div>
+    </Row>
     );
 };
 
