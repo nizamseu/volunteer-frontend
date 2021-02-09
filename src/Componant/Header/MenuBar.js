@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import nature from '../../logos/nature.png'
+import nature from '../../logos/nature.jpg'
 import './menu.css'
 import Header from './Header';
 import Body from '../Body/Body';
@@ -14,7 +14,6 @@ const MenuBar = () => {
                 <Card.ImgOverlay>
                     <Header></Header>
                    <MenuText_Search></MenuText_Search>
-
                     <Body></Body> 
                 </Card.ImgOverlay>
             </Card>

@@ -15,14 +15,16 @@ const Body = () => {
         })
     },[])
     return (
-        <div className='row'>
-             {/* <Link to={'/addEvent'}> Add Event </Link>
-             <Link to={'/event'}> Event Task </Link> */}
+        <div >
+            
            
-           {
+          {
                load.length ===0 && <Spinner></Spinner>
            }
+          
+          <div className='row'>
 
+          
             {load &&
                  load.map(item=>
                     <Col item sm={4} xs={6} md={3}  >
@@ -38,6 +40,7 @@ const Body = () => {
                         </Col>
                  )}
             
+        </div>
         </div>
     );
 };
