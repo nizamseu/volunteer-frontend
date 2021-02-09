@@ -6,6 +6,7 @@ import Paper from '@material-ui/core/Paper';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import { userAuth } from '../../App';
 import { Col, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -68,7 +69,7 @@ const handleCancel=(id,event)=>{
     .then(re=>re.json())
     .then(result =>{
         if(result){
-            event.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.style.display="none"
+            event.target.parentNode.parentNode.parentNode.style.display="none"
         }
     })
 }
@@ -78,7 +79,13 @@ const handleCancel=(id,event)=>{
     console.log("backdata",loadData);
     return (
         <Row item xs={12} className={classes.root}>
-
+          {
+            (loadData.length===0) &&<Grid direction={'column'}  className="d-flex justify-content-center">
+              <h1>Here Is No event Added</h1>
+            
+              <Link to ={'/home'}><h1>Add An Event </h1></Link>
+            </Grid> 
+          }
         {
             loadData&&
             loadData.map(item=> <Col item xs={12} sm={5} className={classes.paper}>
@@ -98,7 +105,7 @@ const handleCancel=(id,event)=>{
                           {item.selectedDate.substring(0,10)}
                         </Typography>
                       
-                       <Grid >
+                      
                        <Button
                         variant="contained" 
                         style={{float:'right',marginTop:'30%'}}
@@ -106,7 +113,7 @@ const handleCancel=(id,event)=>{
                         >
                           Cancel
                         </Button>
-                       </Grid>
+                      
                       </Grid>
                  
                   

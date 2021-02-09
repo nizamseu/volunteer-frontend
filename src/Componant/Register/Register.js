@@ -1,4 +1,4 @@
-import React, { useState ,useEffect} from 'react';
+import React, { useState ,useEffect, useContext} from 'react';
 import { useForm } from "react-hook-form";
 import 'date-fns';
 import Grid from '@material-ui/core/Grid';
@@ -9,15 +9,16 @@ import {
   KeyboardDatePicker,
 } from '@material-ui/pickers';
 import './reg.css'
-import { useHistory, useParams } from 'react-router-dom';
+import { Link, useHistory, useParams } from 'react-router-dom';
 import logo from '../../logos/Group 1329.png'
+import { userAuth } from '../../App';
 const axios = require('axios');
 
 const Register = () => {
     const history=useHistory()
     const {id}=useParams()
     const [loadData,setLoadData]=useState([])
-console.log("load",loadData);
+    const [user,setUser]=useContext(userAuth)
     const [selectedDate, setSelectedDate] = useState(new Date());
     const handleDateChange = (date) => {    
            setSelectedDate(date);
@@ -34,7 +35,9 @@ console.log("load",loadData);
                 console.log("Backed Data",result);
             })
             e.target.reset();
-            history.push('/event')
+            history.push('/home')
+            
+            
         } 
 
         useEffect(()=>{
@@ -47,9 +50,9 @@ console.log("load",loadData);
     return (
         <div className='regMain'>
     
-            <Grid className='d-flex justify-content-center mb-3' >
+            <Link to={'/home'} className='d-flex justify-content-center mb-3' >
             <img style={{width:'250px'}} src={logo} alt=""/>
-            </Grid>
+            </Link>
            <Grid className='d-flex justify-content-center reg'>
     <form onSubmit={handleSubmit(onSubmit)}>
         <h3>Register As Volunteer</h3>
@@ -64,6 +67,7 @@ console.log("load",loadData);
       <input
       name="email" 
       ref={register({ required: true })} 
+      defaultValue={user?.email}
       placeholder="User name or Email" />
       {errors.title && <span>Email is required</span>}
       
