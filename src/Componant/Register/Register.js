@@ -34,7 +34,7 @@ console.log("load",loadData);
                 console.log("Backed Data",result);
             })
             e.target.reset();
-            history.goBack()
+            history.push('/event')
         } 
 
         useEffect(()=>{

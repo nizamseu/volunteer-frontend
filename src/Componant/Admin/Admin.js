@@ -13,8 +13,8 @@ const [toggled,setToggled]=useState(true)
 
     return (
         <div>
-        <Grid container spacing={3}>
-            <Grid item xs={3} className='authLogo'>
+        <Grid container spacing={4}>
+            <Grid  className='authLogo'>
                <Link to={'/home'}><img src={logo} alt=""/></Link> 
             <Grid className='leftMenu'>
             <Button 
@@ -35,7 +35,7 @@ const [toggled,setToggled]=useState(true)
             </Grid>
 
 
-            <Grid item xs={9} >
+            <Grid  spacing={3} item xs={9} >
 
                <Grid className='rigthMenu' >
                {

@@ -1,3 +1,4 @@
+import { Grid } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import trash from '../../logos/trash-alt-regular.svg'
@@ -32,10 +33,10 @@ const VolunteerList = () => {
 
     },[])
     return (
-        <div className='tbl'>
+        <Grid item xs={12} className='tbl'>
         <h4>Register Volunteer List</h4>
 
-<div className='tblInside'>
+<Grid className='tblInside'>
         {
           list.length===0 && <Spinner></Spinner>
         }
@@ -76,9 +77,9 @@ const VolunteerList = () => {
   </tbody>
 </Table>
         }
-        </div>
+        </Grid>
 
-        </div>
+        </Grid>
     );
 };
 
