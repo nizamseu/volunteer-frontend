@@ -27,7 +27,7 @@ const Body = () => {
           
             {load &&
                  load.map(item=>
-                    <Col item sm={4} xs={6} md={3}  >
+                    <Col item sm={6} xs={12} md={3}  >
                 <Link to={`/reg/${item._id}`}>
                          <Card className="cart bg-dark text-white"  >
                             <Card.Img  className ="cartImg"  src={item?.data?.pic} />
