@@ -5,7 +5,7 @@ import firebase from "firebase/app";
 import logo from '../../logos/Group 1329.png'
 import { userAuth } from '../../App';
 import { Image, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 const Header = () => {
@@ -41,16 +41,16 @@ const Header = () => {
            }
          
          
-            <Link className="btn"  to={'/home'}>Home</Link>
+            <NavLink className="btn" exact to='/home'>Home</NavLink>
                 <Link className="btn">Donation</Link>
-                <Link className="btn"  to={'/event'}>Event</Link>
+                <NavLink className="btn" exact to={'/event'}>Event</NavLink>
                 <Link className="btn">BLog</Link>
-                <Link className="btn" to={'/reg'}  >Register</Link>
-                <Link className="btn"  to={'/admin'}  >Admin</Link>
+                <NavLink className="btn" exact to={'/reg'}  >Register</NavLink>
+                <NavLink className="btn"  exact to={'/admin'}  >Admin</NavLink>
                
                 {
                 user.email?<Nav.Link className="btn" onClick={()=>handleSignOut()}>Log Out</Nav.Link>
-                :<Nav.Link className="btn"  href={'/auth'}>LogIn</Nav.Link>
+                :<NavLink className="btn" exact to={'/auth'}>LogIn</NavLink>
                 } 
                
                 {

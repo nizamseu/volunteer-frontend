@@ -13,7 +13,7 @@ const MenuBar = () => {
                 <Card.Img src={nature} style={{height:'500px'}} />
                 <Card.ImgOverlay>
                     <Header></Header>
-                   <MenuText_Search></MenuText_Search>
+                   {/* <MenuText_Search></MenuText_Search> */}
                     <Body></Body> 
                 </Card.ImgOverlay>
             </Card>

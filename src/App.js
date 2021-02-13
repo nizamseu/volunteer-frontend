@@ -32,47 +32,47 @@ const [user,setUser]=useState({
      {/* <Header></Header> */}
        <Switch>
     
-      <Route path="/addevent">
+      <Route exact path="/addevent">
       <EventCreate></EventCreate>
       </Route>
 
 
-      <PrivateRoute path="/reg/:id">
+      <PrivateRoute  path="/reg/:id">
           <Register></Register>
       </PrivateRoute>
 
 
-      <Route path="/reg">
+      <Route exact path="/reg">
         <Register></Register>
       </Route>
-    <PrivateRoute path="/event">
+    <PrivateRoute exact path="/event">
       <Header></Header>
       <EventTask></EventTask>
     </PrivateRoute>
 
-    <Route path="/auth">
+    <Route exact path="/auth">
       <Auth></Auth>
     </Route>
 
-    <Route path="/create">
+    <Route exact path="/create">
       <EventCreate></EventCreate>
     </Route>
 
-    <Route path="/admin">
+    <Route exact path="/admin">
       <Admin></Admin>
     </Route>
 
 
-    <Route path="/list">
+    <Route exact path="/list">
         <VolunteerList></VolunteerList>
     </Route>
 
 
-      <Route path='/menuBar'>
+      <Route exact path='/menuBar'>
         <MenuBar></MenuBar>
       </Route>
 
-      <Route path='/sp'>
+      <Route exact path='/sp'>
           <Spinner></Spinner>
       </Route>
 

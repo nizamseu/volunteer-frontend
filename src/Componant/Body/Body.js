@@ -3,24 +3,33 @@ import { Card, Col} from 'react-bootstrap/';
 import './body.css'
 import {Link} from "react-router-dom";
 import Spinner from '../../Spinner/Spinner';
+import { MenuOpenTwoTone } from '@material-ui/icons';
+import MenuText_Search from '../Header/MenuText_Search';
 const Body = () => {
-    const [load,setLoad]=useState([]);
 
+    const [search,setSearch]=useState('')
+    const [load,setLoad]=useState([]);
+    
     useEffect(()=>{
-        fetch(`https://desolate-depths-30255.herokuapp.com/users/find`)
+        fetch("http://localhost:5000/users/find?search="+search)
         .then(res=>res.json())
         .then(data=>{
-           
             setLoad(data)
         })
-    },[])
+    },[search])
+
+const handleSearch=(event)=>{
+setSearch(event.target.value);
+}
+
+
     return (
         <div >
-            
+           <MenuText_Search handleSearch={handleSearch}></MenuText_Search>
            
-          {
+          {/* {
                load.length ===0 && <Spinner></Spinner>
-           }
+           } */}
           
           <div className='row'>
 
