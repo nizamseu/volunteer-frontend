@@ -9,9 +9,9 @@ const Body = () => {
 
     const [search,setSearch]=useState('')
     const [load,setLoad]=useState([]);
-    
+
     useEffect(()=>{
-        fetch("http://localhost:5000/users/find?search="+search)
+        fetch("https://desolate-depths-30255.herokuapp.com/users/find?search="+search)
         .then(res=>res.json())
         .then(data=>{
             setLoad(data)
@@ -27,9 +27,9 @@ setSearch(event.target.value);
         <div >
            <MenuText_Search handleSearch={handleSearch}></MenuText_Search>
            
-          {/* {
-               load.length ===0 && <Spinner></Spinner>
-           } */}
+          {
+               load.length ===0 && <h1>Not Found</h1>
+           }
           
           <div className='row'>
 
